@@ -19,7 +19,6 @@ jobs:
       run: |
         echo "$VPS_KEY_BASE64" | base64 --decode > /tmp/id_rsa
         chmod 600 /tmp/id_rsa
-        cat /tmp/id_rsa # Debug: Ensure the key is properly decoded
 
     - name: Test SSH Connection
       run: |
