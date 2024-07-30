@@ -13,12 +13,17 @@ jobs:
     - name: Checkout code
       uses: actions/checkout@v2
 
+    - name: Decode and add SSH key
+      run: |
+        echo "${{ secrets.VPS_KEY_BASE64 }}" | base64 --decode > /tmp/id_rsa
+        chmod 600 /tmp/id_rsa
+
     - name: Run deploy script over SSH
       uses: appleboy/ssh-action@master
       with:
         host: ${{ secrets.VPS_HOST }}
         username: ${{ secrets.VPS_USER }}
-        key: ${{ secrets.VPS_KEY }}
+        key: /tmp/id_rsa
         script: |
           cd /srv/www/test
           ./deploy.sh
