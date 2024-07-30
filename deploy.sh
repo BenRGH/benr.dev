@@ -7,10 +7,11 @@ git fetch origin main
 git reset --hard origin/main
 
 echo "Installing dependencies..."
-npm install
+npm i pnpm -g
+pnpm install
 
 echo "Building the application..."
-npm run build
+pnpm run build
 
 echo "Restarting application with PM2..."
 pm2 restart ecosystem.config.js --env production
