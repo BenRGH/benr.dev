@@ -1,8 +1,0 @@
-[
-  {
-    "id": "deploy",
-    "execute-command": "/srv/www/test/deploy.sh",
-    "command-working-directory": "/srv/www/test",
-    "response-message": "Deploying site..."
-  }
-]
