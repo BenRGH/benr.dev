@@ -23,7 +23,7 @@ jobs:
 
     - name: Test SSH Connection
       run: |
-        ssh -i /tmp/id_rsa -o StrictHostKeyChecking=no your_user@your_vps_ip "echo 'SSH Connection Successful'"
+        ssh -i /tmp/id_rsa -o StrictHostKeyChecking=no root@49.13.231.90 "echo 'SSH Connection Successful'"
 
     - name: Run deploy script over SSH
       uses: appleboy/ssh-action@master
