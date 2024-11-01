@@ -1,6 +1,6 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
-import '../styles/global.css';
+import "../styles/global.css";
 
 const pageTitle = "ABOO";
 
@@ -21,13 +21,13 @@ const skillColor = "navy";
 ---
 
 <html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>{pageTitle}</title>
-    <style define:vars={{skillColor}}>
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="generator" content={Astro.generator} />
+    <title>{pageTitle}</title>
+    <style define:vars={{ skillColor }}>
       h1 {
         color: purple;
         font-size: 4rem;
@@ -37,19 +37,28 @@ const skillColor = "navy";
         font-weight: bold;
       }
     </style>
-	</head>
-	<body>
+  </head>
+  <body>
     <BaseLayout pageTitle={pageTitle}>
-      <p>this is a silly astro tutorial for babies but i am a baby so here i am</p>
+      <p>
+        this is a silly astro tutorial for babies but i am a baby so here i am
+      </p>
 
       <p>second paragraph here</p>
 
       <p>Here are a few facts about me:</p>
       <ul>
         <li>My name is {identity.firstName}.</li>
-        <li>I live in {identity.country} and I work as a {identity.occupation}.</li>
-        {identity.hobbies.length >= 2 &&
-          <li>Two of my hobbies are: {identity.hobbies[0]} and {identity.hobbies[1]}</li>
+        <li>
+          I live in {identity.country} and I work as a {identity.occupation}.
+        </li>
+        {
+          identity.hobbies.length >= 2 && (
+            <li>
+              Two of my hobbies are: {identity.hobbies[0]} and{" "}
+              {identity.hobbies[1]}
+            </li>
+          )
         }
       </ul>
       <p>My skills are:</p>
@@ -61,7 +70,13 @@ const skillColor = "navy";
 
       {finished && <p>I finished this tutorial!</p>}
 
-      {goal === 3 ? <p>My goal is to finish in 3 days.</p> : <p>My goal is not 3 days.</p>}
+      {
+        goal === 3 ? (
+          <p>My goal is to finish in 3 days.</p>
+        ) : (
+          <p>My goal is not 3 days.</p>
+        )
+      }
     </BaseLayout>
   </body>
 </html>

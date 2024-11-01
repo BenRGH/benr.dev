@@ -3,15 +3,16 @@ import { Image } from "astro:assets";
 
 // TODO categories etc
 const images = [
-  { src: "/src/assets/img/_9215884_DxO.webp", alt: 'Image 1' },
-  { src: "/src/assets/img/_9215884_DxO.webp", alt: 'Image 2' },
-  { src: "/src/assets/img/_9215884_DxO.webp", alt: 'Image 3' },
-  { src: "/src/assets/img/_9215884_DxO.webp", alt: 'Image 4' },
-  { src: "/src/assets/img/_9215884_DxO.webp", alt: 'Image 5' },
-  { src: "/src/assets/img/_9215884_DxO.webp", alt: 'Image 6' },
+  { src: "/src/assets/img/_9215884_DxO.webp", alt: "Image 1" },
+  { src: "/src/assets/img/_9215884_DxO.webp", alt: "Image 2" },
+  { src: "/src/assets/img/_9215884_DxO.webp", alt: "Image 3" },
+  { src: "/src/assets/img/_9215884_DxO.webp", alt: "Image 4" },
+  { src: "/src/assets/img/_9215884_DxO.webp", alt: "Image 5" },
+  { src: "/src/assets/img/_9215884_DxO.webp", alt: "Image 6" },
   // Add more image objects as needed
 ];
 ---
+
 <style>
   img {
     width: 100%;
@@ -25,9 +26,11 @@ const images = [
 </style>
 
 <div class="gallery-grid">
-  {images.map((image) => (
-    <div class="gallery-item">
-      <Image src={image.src} alt={image.alt} width={400} height={400} />
-    </div>
-  ))}
+  {
+    images.map((image) => (
+      <div class="gallery-item">
+        <Image src={image.src} alt={image.alt} width={400} height={400} />
+      </div>
+    ))
+  }
 </div>
