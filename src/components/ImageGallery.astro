@@ -1,12 +1,8 @@
 ---
 import { Image } from "astro:assets";
+import { getCollection } from "astro:content";
 
-// TODO categories etc
-const images = import.meta.glob<{ default: ImageMetadata }>('/src/assets/img/*.{jpeg,jpg,png,gif,webp}')
-const imagesArray = Object.entries(images).map(([path, image]) => ({
-  src: path,
-  alt: 'idk',
-}))
+const albums = await getCollection("albums");
 ---
 
 <style>
@@ -22,11 +18,33 @@ const imagesArray = Object.entries(images).map(([path, image]) => ({
 </style>
 
 <div class="gallery-grid">
-  {
-    imagesArray.map((image) => (
-      <div class="gallery-item">
-        <Image src={image.src} alt={image.alt} width={400} height={400} />
-      </div>
-    ))
-  }
+    {
+      albums.map((item) => (
+        <div class="gallery-item">
+          <a
+            href={`/gallery/${item.id}`}
+          >
+            <Image
+              src={item.data.cover}
+              alt={item.data.title}
+              width="1000"
+              height="1000"
+              quality={90}
+            />
+            {/* <img
+              src={item.data.cover.src}
+              alt={item.data.title}
+              width="400"
+              height="400"
+              decoding="async"
+              loading="lazy"
+            /> */}
+            <div >
+              <strong class="font-normal">{item.data.title}</strong>
+              <p>{item.data.description}</p>
+            </div>
+          </a>
+        </div>
+      ))
+    }
 </div>
