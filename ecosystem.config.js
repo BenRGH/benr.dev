@@ -5,7 +5,7 @@ module.exports = {
     instances: 'max',
     autorestart: true,
     watch: true,
-    ignore_watch: ["node_modules", ".next"],
+    ignore_watch: ["node_modules", ".next", ".git", ".astro", ".vscode"],
     max_memory_restart: '1G',
     cwd: "/srv/www/test",
     env: {

@@ -1,0 +1,25 @@
+---
+import Navigation from "./Navigation.astro";
+import Hamburger from "./Hamburger.astro";
+import ThemeIcon from "./ThemeIcon.astro";
+const { title } = Astro.props;
+---
+
+<style>
+  header {
+    margin-top: 2rem;
+  }
+  h1 {
+    font-size: 2rem;
+  }
+  p {
+    font-size: 1.25rem;
+  }
+</style>
+
+<header>
+  <Hamburger />    
+  <ThemeIcon />
+  <Navigation />
+  <h1>{ title }</hl>
+</header>
