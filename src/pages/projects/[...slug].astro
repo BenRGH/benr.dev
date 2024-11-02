@@ -13,6 +13,11 @@ export async function getStaticPaths() {
 
 const { entry }: { entry: CollectionEntry<'projects'> } = Astro.props;
 const { Content } = await entry.render();
+
+// 404 handling
+if (!entry || !entry.data || !Content) { 
+  return Astro.redirect("/404");
+}
 ---
 
 <MarkdownPostLayout frontmatter={entry.data}>
