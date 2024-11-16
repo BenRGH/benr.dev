@@ -1,116 +1,36 @@
 ---
-import BaseLayout from "../layouts/BaseLayout.astro";
-import Greeting from "../components/Greeting";
-const pageTitle = "HOIME";
+import PageSection from "../components/PageSection.astro";
+import HomeLayout from "../layouts/HomeLayout.astro";
+
+import home1 from "../images/home1.jpg";
 ---
+<style>
+  #home-section-title {
+    position: absolute;
+    top: 8%;
+    left: 75%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-size: 4rem;
+    text-align: center;
+    z-index: 3;
+  }
+</style>
 
-<BaseLayout pageTitle={pageTitle}>
-  <h2>My awesome blog subtitle</h2>
+<HomeLayout>
+  <PageSection id="home" image={home1} imageAlt="fairground ride in sunset lighting">
+    <div id="home-section-title">
+      <h1>benr.dev</h1>
+    </div>
+  </PageSection>
 
-  <p>
-    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Itaque magni culpa
-    quaerat, error tenetur maiores deserunt incidunt ipsam delectus eaque
-    corporis repellat velit assumenda eum dolor officiis. Magni, aliquid earum?
-  </p>
-  <p>
-    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Itaque magni culpa
-    quaerat, error tenetur maiores deserunt incidunt ipsam delectus eaque
-    corporis repellat velit assumenda eum dolor officiis. Magni, aliquid earum?
-  </p>
-  <p>
-    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Itaque magni culpa
-    quaerat, error tenetur maiores deserunt incidunt ipsam delectus eaque
-    corporis repellat velit assumenda eum dolor officiis. Magni, aliquid earum?
-  </p>
-  <p>
-    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Itaque magni culpa
-    quaerat, error tenetur maiores deserunt incidunt ipsam delectus eaque
-    corporis repellat velit assumenda eum dolor officiis. Magni, aliquid earum?
-  </p>
-  <p>
-    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Itaque magni culpa
-    quaerat, error tenetur maiores deserunt incidunt ipsam delectus eaque
-    corporis repellat velit assumenda eum dolor officiis. Magni, aliquid earum?
-  </p>
-  <p>
-    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Itaque magni culpa
-    quaerat, error tenetur maiores deserunt incidunt ipsam delectus eaque
-    corporis repellat velit assumenda eum dolor officiis. Magni, aliquid earum?
-  </p>
-  <p>
-    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Itaque magni culpa
-    quaerat, error tenetur maiores deserunt incidunt ipsam delectus eaque
-    corporis repellat velit assumenda eum dolor officiis. Magni, aliquid earum?
-  </p>
-  <p>
-    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Itaque magni culpa
-    quaerat, error tenetur maiores deserunt incidunt ipsam delectus eaque
-    corporis repellat velit assumenda eum dolor officiis. Magni, aliquid earum?
-  </p>
-  <p>
-    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Itaque magni culpa
-    quaerat, error tenetur maiores deserunt incidunt ipsam delectus eaque
-    corporis repellat velit assumenda eum dolor officiis. Magni, aliquid earum?
-  </p>
-  <p>
-    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Itaque magni culpa
-    quaerat, error tenetur maiores deserunt incidunt ipsam delectus eaque
-    corporis repellat velit assumenda eum dolor officiis. Magni, aliquid earum?
-  </p>
+  <PageSection id="projects">
+    <h1>Projects</h1>
+  </PageSection>
 
-  <h1 id="about">about</h1>
-
-  <p>
-    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Itaque magni culpa
-    quaerat, error tenetur maiores deserunt incidunt ipsam delectus eaque
-    corporis repellat velit assumenda eum dolor officiis. Magni, aliquid earum?
-  </p>
-  <p>
-    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Itaque magni culpa
-    quaerat, error tenetur maiores deserunt incidunt ipsam delectus eaque
-    corporis repellat velit assumenda eum dolor officiis. Magni, aliquid earum?
-  </p>
-  <p>
-    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Itaque magni culpa
-    quaerat, error tenetur maiores deserunt incidunt ipsam delectus eaque
-    corporis repellat velit assumenda eum dolor officiis. Magni, aliquid earum?
-  </p>
-  <p>
-    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Itaque magni culpa
-    quaerat, error tenetur maiores deserunt incidunt ipsam delectus eaque
-    corporis repellat velit assumenda eum dolor officiis. Magni, aliquid earum?
-  </p>
-  <p>
-    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Itaque magni culpa
-    quaerat, error tenetur maiores deserunt incidunt ipsam delectus eaque
-    corporis repellat velit assumenda eum dolor officiis. Magni, aliquid earum?
-  </p>
-
-  <p>
-    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Itaque magni culpa
-    quaerat, error tenetur maiores deserunt incidunt ipsam delectus eaque
-    corporis repellat velit assumenda eum dolor officiis. Magni, aliquid earum?
-  </p>
-  <p>
-    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Itaque magni culpa
-    quaerat, error tenetur maiores deserunt incidunt ipsam delectus eaque
-    corporis repellat velit assumenda eum dolor officiis. Magni, aliquid earum?
-  </p>
-  <p>
-    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Itaque magni culpa
-    quaerat, error tenetur maiores deserunt incidunt ipsam delectus eaque
-    corporis repellat velit assumenda eum dolor officiis. Magni, aliquid earum?
-  </p>
-  <p>
-    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Itaque magni culpa
-    quaerat, error tenetur maiores deserunt incidunt ipsam delectus eaque
-    corporis repellat velit assumenda eum dolor officiis. Magni, aliquid earum?
-  </p>
-  <p>
-    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Itaque magni culpa
-    quaerat, error tenetur maiores deserunt incidunt ipsam delectus eaque
-    corporis repellat velit assumenda eum dolor officiis. Magni, aliquid earum?
-  </p>
+  <PageSection id="about">
+    <h1>About</h1>
+  </PageSection>
 
   <!-- <Greeting client:load messages={["Hej", "Hallo", "Hola", "Habari"]} /> -->
-</BaseLayout>
+</HomeLayout>

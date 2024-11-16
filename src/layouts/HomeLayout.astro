@@ -1,0 +1,23 @@
+---
+import Footer from "../components/Footer.astro";
+import Head from "../components/Head.astro";
+import HomeNavigation from "../components/HomeNavigation.astro";
+import "../styles/global.css";
+---
+<style>
+  body {
+    position: relative;
+  }
+</style>
+
+
+<html lang="en">
+  <Head pageTitle={"benr.dev"} />
+  <body>
+    <HomeNavigation />
+
+    <slot />
+
+    <Footer />
+  </body>
+</html>
